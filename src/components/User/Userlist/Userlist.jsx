@@ -32,6 +32,7 @@ class Usrtlist extends Component {
   //退出登入
   dr () {
     this.props.history.push('/userapp/res')
+    localStorage.removeItem('isLogin')
   }
   //查看订单
   xqing(){
