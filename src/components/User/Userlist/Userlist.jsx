@@ -1,7 +1,7 @@
 import React,{Component} from "react";
 import "./Userlist.scss";
 import { List, Grid, Button } from "antd-mobile";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Item = List.Item;
 let TabArray = [
@@ -72,8 +72,8 @@ class Usrtlist extends Component {
             意见反馈
           </Item>
         </List>
-        {/* <Button onClick={this.dr.bind(this)}>退出登入</Button> */}
-        <Link to="/kind">退出登入</Link>
+        <Button onClick={this.dr.bind(this)}>退出登入</Button>
+        {/* <Link to="/kind">退出登入</Link> */}
       </div>
     );
   }
