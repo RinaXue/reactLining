@@ -1,0 +1,64 @@
+@import '@/qunar/reset.scss';
+html, body, #root, .box {
+  @include rect(100%, 100%);
+}
+
+.box {
+  @include flexbox();
+  @include flex-direction(column);
+  .header {
+    @include rect(100%, 0.44rem);
+    @include background-color(#f66);
+  }
+  .movielist {
+    a {
+      @include rect(100%, 1.1rem);
+      @include flexbox();
+      margin:10px 0;
+      border-bottom: 1px solid #000;
+      .movieimg{
+        @include rect(1.2rem, 1.2rem);
+        @include padding(0.05rem);
+        img{
+          @include rect(1rem, 1rem);
+        }
+      }
+  
+      .info {
+        @include flex();
+          font-size: 14px;
+          color:#333;
+        .price {
+          .zhehou {
+            font-size: 18px;
+            color: #f63234;
+          }
+          .zheqian {
+            font-size: 14px;
+            color: #ccc;
+          }
+        }
+       
+      }
+  }
+}  
+  .footer {
+    @include rect(100%, 0.5rem);
+    @include background-color(#eee);
+    ul {
+      @include rect(100%, 100%);
+      @include flexbox();
+      a {
+        @include flex();
+        @include rect(auto, 100%);
+        @include flexbox();
+        @include justify-content();
+        @include align-items();
+
+        &.active {
+          @include color(#f66);
+        }
+      }
+    }
+  }
+}

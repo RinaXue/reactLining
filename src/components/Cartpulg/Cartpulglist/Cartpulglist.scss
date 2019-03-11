@@ -1,0 +1,143 @@
+@import '../../../qunar/reset';
+
+.contentb{
+  @include rect(100%, auto);
+  .content{
+    @include rect(100%, auto);
+    @include flexbox();
+    @include flex-direction(column);
+    //position:relative;
+    .cart-content-list{
+      @include rect(100%, auto);
+      float: left;
+      .cart-content-list-check{
+        float: left;
+        @include rect(12%, 1.1rem);
+        input{
+          vertical-align: middle;
+          @include rect(50%, 1.1rem);
+          margin-left: 25%;
+
+        }
+      }
+      .am-flexbox-align-center{
+        @include rect(12%, 1.1rem);
+        float: left;
+      }
+      .cart-content-list-card{
+        @include rect(85%, 1.1rem);
+        float: left;
+        margin-left: 3%;
+        border-bottom: #ccc 0.005rem solid;
+        img {
+          @include rect(30%, 100%);
+          padding-top: 2%;
+          float: left;
+        }
+        h4{
+          @include rect(68%, auto);
+          margin-left: 2%;
+          margin-top: 0.15rem;
+          float: left;
+          font-size: 0.15rem;
+        }
+        h5{
+          font-size: 0.17rem;
+          margin-left: 5%;
+          margin-top: 0.12rem;
+          width: 55%;
+          float: left;
+          color: #e24357;
+        }
+      }
+      .cart-content-list-num{
+        @include rect(100%,0.35rem);
+        padding-left: 10%;
+        float: left;
+        border-bottom: #999999 0.01rem solid;
+        margin-top: 0.05rem;
+        padding-bottom: 0.05rem;
+        .cart-content-list-num-l{
+          @include rect(60%,0.3rem);
+          float: left;
+          p{
+            @include rect(100%,0.3rem);
+            display: block;
+            padding-left: 7%;
+            line-height: 0.3rem;
+            font-weight: bold;
+            font-size: 0.17rem;
+            span{
+              color: #e24357;
+            }
+          }
+        }
+        h6{
+          float: left;
+          margin-right: 5%;
+          @include rect(10%, 0.3rem);
+          border: 0.01rem #ccc solid;
+          border-radius: 5px;
+          span{
+            line-height: 0.25rem;
+            text-align: center;
+            display: block;
+            font-size: 0.2rem;
+          }
+        };
+        h5{
+          float: left;
+          margin-right: 5%;
+          @include rect(5%, 0.3rem);
+          span{
+            line-height: 0.3rem;
+            text-align: center;
+            display: block;
+          }
+        }
+      }
+      .am-list-item-middle{
+        padding-left: 15%;
+        @include rect(100%, 0.5rem);
+        float: left;
+        border-bottom: #ddd 0.01rem solid;
+        h6{
+          float: left;
+          line-height: 0.5rem;
+          span{
+            color: #e24357;
+          }
+        }
+      }
+    }
+
+    .cart-content-list-foot{
+      //float: right;
+      @include rect(100%, 0.5rem);
+      //position: absolute;
+      left: 0;
+      bottom: 0.6rem;
+      position: fixed;
+      background: #F5F5F9;
+      border-bottom: 0.005rem #999 solid;
+      .cart-content-list-footbutton{
+        float: right;
+        @include rect(30%, 0.5rem);
+      }
+      .cart-content-list-foottotal{
+        float: right;
+        @include rect(70%, 0.5rem);
+        h5{
+          float: right;
+          padding-right: 0.1rem;
+          line-height: 0.5rem;
+          font-size: 0.18rem;
+          span{
+            color: #e24357;
+          }
+        }
+      }
+    }
+  }
+
+}

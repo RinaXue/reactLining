@@ -1,0 +1,203 @@
+@import '@/qunar/reset.scss';
+html, body, #root {
+  overflow: auto;
+  height: 100%;
+}
+html {
+  font-size: 26.67vw;
+}
+.detailpage {
+  background-color: #eee;
+  width: 100%;
+  position: relative;
+  .detail {
+    .navpage {
+      padding-bottom: .5rem;
+      .picture {
+        @include rect(100%, 11.41rem);
+        display: block;
+        img {
+          @include rect(3.55rem, 11.21rem);
+          margin-left: .1rem;
+        }
+      }
+      .params {
+        display: none;
+        @include rect(100%, 100%);
+        .gpic {
+          @include rect(100%, 100%);
+          img {
+            @include rect(3.75rem, 3.75rem);
+          }          
+        }
+        .gname {
+          padding-left: .2rem;
+        }
+        .gsku {
+          padding-left: .2rem;
+        }
+      }
+      .comment {
+        display: none;
+        @include rect(100%, 3rem);
+        padding-top: .3rem;
+        span {
+          margin-left: .2rem;
+        }
+      }
+    }
+    margin-top: .2rem;
+    background-color: #fff;
+    .navlist {
+      display: flex;
+      justify-content: space-around;
+      border-top: .01rem solid #e5e5e5;
+      border-bottom: .01rem solid #e5e5e5;
+      @include rect(100%, .4rem);
+      span {
+        font: .16rem/.38rem "";
+        padding: 0 .28rem;
+      }
+      .bor {
+        border-bottom: .02rem solid #f00;
+      }
+    }
+  }
+  .footer {
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+    border-top: .01rem solid #ccc;
+    display: flex;
+    @include rect(100%, .5rem);
+    .hide {
+      margin-left: .16rem;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      .iconshoucang {
+        font-size: .18rem;
+      }
+    }
+    .cart {
+      position: relative;
+      margin-left: .28rem;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      .icongou_wu_che2 {
+        font-size: .18rem;
+        color: #f00;
+      }
+      i {
+        position: absolute;
+        @include rect(.15rem, .15rem);
+        background-color: #f00;
+        border-radius: 50%;
+        color: #fff;
+        font: .12rem/.15rem "";
+        top: 0;
+        right: -.05rem;
+      }
+    }
+    .addCart {
+      @include rect(.96rem, .34rem);
+      background-color: #6a94e7;
+      border-radius: .05rem;
+      text-align: center;
+      font: .12rem/.34rem "";
+      color: #fff;
+      margin: .08rem 0 0 .71rem;
+    }
+    .buy {
+      margin: .08rem 0 0 .04rem;
+      @include rect(.82rem, .34rem);
+      background-color: #f63234;
+      border-radius: .05rem;
+      text-align: center;
+      font: .12rem/.34rem "";
+      color: #fff;
+    }
+  }
+  .header {
+    @include rect(100%, .44rem);
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+    font: .18rem/.44rem "";
+    .title {
+      margin-left: -.3rem;
+    }
+    .icon2fanhui {
+      float: left;
+      font: .2rem/.44rem "";
+      margin-left: .15rem;
+    }
+  }
+  .bannerone {
+    @include rect(100%, 3rem);
+      img {
+        @include rect(100%, 100%);
+      } 
+  }
+  .matter {
+    @include rect(100%, 2rem);
+    background-color: #fff;
+    .goodsname {
+      padding: .1rem 0 0 .1rem;
+      width: 3.55rem;
+      color: #333;
+      font: .14rem/.2rem "";
+    }
+    .goodsprice {
+      span {
+        color: #999;
+        font: .13rem/.49rem "";
+        margin: 0 .06rem 0 .16rem;
+      }
+      i {
+        color: #ce0000;
+        font: .17rem/.49rem "";
+      }
+    }
+    .goodscolor {
+      span {
+        color: #999;
+        font: .13rem/.42rem "";
+        margin-left: .16rem;
+      }
+      b {
+        display: inline-block;
+        @include rect(.45rem, .25rem);
+        border: .02rem solid #aaa;
+        margin-left: .14rem;
+        font: 100 .12rem/.25rem "";
+        color: #000;
+        text-align: center;
+      }
+      .active {
+        border: .02rem solid #f00;
+      }
+    }
+    .goodsnumber {
+      span {
+        color: #999;
+        font: .13rem/.66rem "";
+        margin: 0 .13rem 0 .16rem;
+      }
+      b {
+        border: .02rem solid #aaa;
+        display: inline-block;
+        @include rect(.19rem, .21rem);
+        text-align: center;
+      }
+      i {
+        border: .02rem solid #aaa;
+        display: inline-block;
+        @include rect(.36rem, .21rem);
+        text-align: center;
+        margin: 0 .14rem;
+      }
+    }
+  }
+}

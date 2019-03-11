@@ -1,0 +1,34 @@
+@import '../../../qunar/reset';
+
+.content{
+  .cart-content-none{
+    @include rect(100%, 2.5rem);
+    text-align: center;
+    .cart-content-none-icon {
+      @include rect(100%, auto);
+      font-size: 1rem;
+      font-weight: normal;
+      margin-top: 0.3rem;
+      color: #999;
+    }
+    .cart-content-none-title{
+      font-size: 0.2rem;
+      font-weight: normal;
+    }
+    .cart-content-none-a{
+      @include rect(30%, 0.4rem);
+      background: #0bbbef;
+      display: block;
+      margin-top: 0.3rem;
+      text-align: center;
+      margin-left: 35%;
+      i{
+        color: #fff;
+        padding: 0.1rem 0.15rem;
+        font-size: 0.17rem;
+        font-weight: normal;
+        line-height: 0.4rem;
+      }
+    }
+  }
+}

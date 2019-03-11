@@ -1,0 +1,80 @@
+@import '@/qunar/reset.scss';
+
+html {
+  font-size: 26.67vw;
+}
+.pageSearch {
+  @include rect(100%, 100%);
+  background-color: #fff;
+  .list {
+    @include rect(100%, 100%);
+    ul {
+      .searchWord {
+        display: block;
+        background: #fff;
+        border-top: .01rem solid #f7f7f7;
+        border-bottom: .01rem solid #f7f7f7;
+        @include rect(100%, .8rem)
+        img {
+          float: left;
+          @include rect(.8rem, .63rem)
+        }
+        .detail {
+          float: left;
+          padding-left: .2rem;
+          .name {
+            color: #000;
+            width: 2.45rem;
+            margin-top: .1rem
+          }
+          .price {
+            color: #f00;
+          }
+          .clear {
+            clear:both;
+          }
+        }
+      }
+    }
+  }
+  .header {
+    background-color: #000;
+    @include rect(100%, .44rem);
+    top: 0;
+    z-index: 1;
+    .icon2fanhui {
+      float: left;
+      font: .2rem/.44rem "";
+      margin-left: .15rem;
+      color: #fff;
+    }
+    .header-l {
+      float: left;
+      @include rect(2.5rem, .34rem);
+      border-radius: .05rem;
+      background-color: #fff;
+      margin: .05rem 0 0 .25rem;
+      .iconsousuo {
+        float: left;
+        font-size: .25rem;
+        color: #7795ed;
+      }
+      .txt {
+        float: left;
+        @include rect(2rem, .2rem);
+        border: 0;
+        margin: .09rem 0 0 .05rem;
+      }
+    }
+    .header-r {
+      float: right;
+      @include rect(.42rem, .34rem);
+      background-color: #a599a5;
+      color: #ccc;
+      border-radius: .05rem;
+      text-align: center;
+      font: .12rem/.34rem "";
+      margin: .05rem .05rem 0 0;
+    }
+  }
+}

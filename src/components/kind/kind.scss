@@ -1,0 +1,95 @@
+@import '@/qunar/reset.scss';
+
+.box .am-navbar-light {
+    background-color: black;
+    color: #fff;
+}
+
+.box .am-navbar-light .am-navbar-title {
+    color: #fff;
+}
+
+.box .am-navbar-light .am-navbar-left-icon .am-icon{
+    // font-size: 20px;
+    width: 20px;
+    height:20px;
+}
+
+.box .content .leixing .ul1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.box .content .leixing .ul1 li{
+    width:33%;
+    height: 135px;
+    border: 1px solid #e5e5e5;
+    background-color: #fff;
+}
+
+.box .content .leixing .ul1 li.te {
+    border-right:none;
+}
+
+.box .content .leixing .ul1 li.te2 {
+    border-bottom:none;
+}
+
+.box .content .pinpai {
+    margin-top: 10px;
+}
+
+.box .content .pinpai h3 {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 10px;
+    color: #6a94e7;
+    margin: 0;
+    background: #fff;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.box .content .pinpai .ul2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.box .content .pinpai .ul2 li{
+    width: 33%;
+    height: 80px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-right: none;
+    border-bottom: none;
+    text-align: center;
+    line-height: 80px;
+    padding: 5% 0;
+}
+
+.box .content  .leixing .ul1 li a {
+    text-align: center;
+}
+
+.box .content  .leixing .ul1 li a img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-bottom:5px;
+    margin-left: 15px;
+}
+
+.box .content .pinpai .ul2 li a {
+    display:block;
+    
+}
+
+.box .content .pinpai .ul2 li a img {
+    display: block;
+    width: 100px;
+    height: 40px;
+    margin-left: 10px;
+}

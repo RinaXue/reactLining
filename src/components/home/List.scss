@@ -1,0 +1,37 @@
+@import '@/qunar/reset.scss';
+
+.shoplist {
+  background-color: #eee;
+  .tb_box {
+    margin-top: .1rem;
+    background-color: #fff;
+    border-top: .01rem solid #e5e5e5;
+    border-bottom: .01rem solid #e5e5e5;
+    width: 100%;
+    .tb_tit {
+      @include rect(100%, .42rem);
+      text-indent: .1rem;
+      font: .2rem/.42rem "";
+      .more {
+        float: right;
+        font: .14rem/.42rem "";
+        margin-right: .13rem;
+      }
+    }
+    .tb_type {
+      background-color: #e5e5e5;
+      border-top: .01rem solid #e5e5e5;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      a {
+        img {
+          @include rect(1.87rem, 1.87rem);
+        }
+      }
+      .tb_spe {
+        margin-bottom: .01rem;
+      }
+    }
+  }
+}

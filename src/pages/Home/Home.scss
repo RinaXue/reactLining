@@ -1,0 +1,92 @@
+@import '@/qunar/reset.scss';
+
+.html {
+  font-size: 26.67vw;
+}
+
+.box {
+  .header {
+    background-color: #000;
+  }
+}
+.content {
+  overflow: auto;
+  height: 100%;
+  position:relative;
+  .header {
+    background-color: #000;
+    @include rect(100%, .44rem);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    .header-l {
+      float: left;
+      @include rect(3.15rem, .34rem);
+      border-radius: .05rem;
+      background-color: #fff;
+      margin: .05rem 0 0 .05rem;
+      .iconsousuo {
+        float: left;
+        font-size: .25rem;
+        color: #7795ed;
+      }
+      .txt {
+        float: left;
+        @include rect(2.71rem, .2rem);
+        border: 0;
+        margin: .09rem 0 0 .05rem;
+      }
+    }
+    .header-r {
+      float: right;
+      @include rect(.42rem, .34rem);
+      background-color: #a599a5;
+      color: #ccc;
+      border-radius: .05rem;
+      text-align: center;
+      font: .12rem/.34rem "";
+      margin: .05rem .05rem 0 0;
+    }
+  }
+  .navlist {
+    @include rect(100%, .76rem);
+    background-color: #fff;
+    ul {
+      @include flexbox();
+      @include rect(100%, 100%);
+      li {
+        @include flex();
+        @include flexbox();
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        img {
+          @include rect(.48rem, .48rem);
+        }
+        h4 {
+          color: #666;
+          font-weight: 100;
+        }
+      }
+    }
+  }
+  .banner {
+    @include rect(100%, 2rem);
+    margin-top: .44rem;
+    .am-wingblank,.am-wingblank-lg {
+      margin: 0;
+      img {
+        @include rect(100%, 2rem);
+      }
+      .am-carousel-wrap-dot > span {
+        @include rect(.1rem, .1rem);
+        margin: 0 .06rem;
+        border: .01rem solid #f00;
+        background-color: #fff;
+      }
+      .am-carousel-wrap-dot-active > span {
+        background-color: #f00;
+      }
+    }
+  }
+}
