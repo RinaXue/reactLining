@@ -52,7 +52,7 @@ class Cartpulglist extends Component{
             cartdata : JSON.parse(localStorage.getItem("cartData"))
         });
     };
-    changeNum(type, obj, e){
+    changeNum(type, obj){
         if (type===-1) {
             obj.number -= 1;
             if (obj.number<1) {
@@ -63,7 +63,7 @@ class Cartpulglist extends Component{
         }
         let newArr = JSON.parse(localStorage.getItem('cartData'));
         newArr.map((item, index) => {
-            if(item.postID===obj.postID) {
+            if(item.id===obj.id) {
                 item.number = obj.number
             }
         });
@@ -74,7 +74,7 @@ class Cartpulglist extends Component{
 
     render() {
         let arr = [];
-        this.state.cartdata.map((item, index) =>{
+        this.state.cartdata && this.state.cartdata.map((item, index) =>{
             arr.push(
                 <div className={"cart-content-list"} key={index}>
                     {/*<Flex>*/}
