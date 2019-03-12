@@ -5,6 +5,7 @@ import App from './layout/App';
 import UserApp from './layout/UserApp';
 import DetailApp from './layout/DetailApp';
 import SearchApp from './layout/SearchApp';
+import CartApp from './layout/CartApp';
 import 'antd-mobile/dist/antd-mobile.css';
 import './main.scss';
 
@@ -15,6 +16,7 @@ ReactDOM.render(
       <Switch>
         <Route path='/search' component={SearchApp}></Route>
         <Route path='/detail' component={DetailApp}></Route>
+        <Route path='/cartapp' component={CartApp}></Route>
         <Route path='/userapp' component={UserApp}/>
         <Route path='/' component ={App}/>
       </Switch>
