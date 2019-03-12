@@ -127,8 +127,8 @@ class Detail extends Component {
     }
     this.setState({
       cartnumber: cartArr.length
-    })
-    cartArr = JSON.stringify(cartArr)
+    });
+    cartArr = JSON.stringify(cartArr);
     localStorage.setItem('cartData', cartArr)
   }
   goCart () {
