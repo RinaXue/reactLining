@@ -69,6 +69,7 @@ class Logincontent extends Component {
         Toast.success('登入成功',2)
         this.props.history.push({pathname:'/home'})
         localStorage.setItem('isLogin','ok')
+        localStorage.setItem('Id',this.state.value)
       } else if (data === -1) {
         Toast.info('密码错误',2)
       } else if (data === 2) {

@@ -133,6 +133,7 @@ class Rescontent extends Component {
       } else {
         Toast.info('注册成功',2)
         localStorage.setItem('isLogin','ok')
+        localStorage.setItem('Id',this.state.phone)
         this.props.history.push({pathname:'/home'})
       }
     })

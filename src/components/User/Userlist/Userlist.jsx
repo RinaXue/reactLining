@@ -1,6 +1,7 @@
 import React,{Component} from "react";
 import "./Userlist.scss";
 import { List, Grid, Button } from "antd-mobile";
+// import { AST_Break } from "terser";
 // import { Link } from "react-router-dom";
 
 const Item = List.Item;
@@ -33,18 +34,36 @@ class Usrtlist extends Component {
   dr () {
     this.props.history.push('/userapp/res')
     localStorage.removeItem('isLogin')
+    localStorage.removeItem('Id')
   }
   //跳转我的订单
   dd(){
     this.props.history.push('/cartapp/order')
   }
-  //查看订单
-  xqing(){
-    this.props.history.push('/dingdan')
+  //查看收藏一栏
+  sc(el,index){
+    console.log(el,index);
+    switch(index){
+      case 0 : this.props.history.push('/userapp/favorites');
+      break;
+      default :
+      break;
+    }
+  }
+  //待付款一栏
+  fk(el,index){
+    console.log(el,index);
+    this.props.history.push('/cartapp/order')
+    // switch(index){
+    //   case 0 : this.props.history.push('/userapp/favorites');
+    //   break;
+    //   default :
+    //   break;
+    // }
   }
 
   render(){
-    console.log(this.props)
+    // console.log(this.props)
     return (
       <div>
         <List>
@@ -58,8 +77,8 @@ class Usrtlist extends Component {
           </Item>
         </List>
         <div>
-          <Grid data={data} hasLine={false} className="Tab" onClick={this.xqing.bind(this)}/>
-          <Grid data={data2} hasLine={true} className="Tab" />
+          <Grid data={data} hasLine={false} className="Tab" onClick={this.fk.bind(this)}/>
+          <Grid data={data2} hasLine={true} className="Tab" onClick={this.sc.bind(this)}/>
         </div>
         <List>
           <Item
