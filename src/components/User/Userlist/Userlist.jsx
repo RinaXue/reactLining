@@ -34,6 +34,10 @@ class Usrtlist extends Component {
     this.props.history.push('/userapp/res')
     localStorage.removeItem('isLogin')
   }
+  //跳转我的订单
+  dd(){
+    this.props.history.push('/cartapp/order')
+  }
   //查看订单
   xqing(){
     this.props.history.push('/dingdan')
@@ -48,7 +52,7 @@ class Usrtlist extends Component {
             thumb="/images/member_img16.png"
             arrow="horizontal"
             extra="查看内容"
-            onClick={() => {}}
+            onClick={this.dd.bind(this)}
           >
             我的订单
           </Item>
