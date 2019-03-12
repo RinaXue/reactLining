@@ -39,9 +39,8 @@ class Com extends Component{
                     <WingBlank>
                         <Carousel
                         autoplay={true}
+                        autoplayInterval={1000}
                         infinite
-                        beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
-                        afterChange={index => console.log('slide to', index)}
                         >
                         {this.state.data.map(val => (
                             <a
