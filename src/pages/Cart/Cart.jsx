@@ -2,22 +2,27 @@ import React, {Component} from 'react'
 import "./Cart.scss"
 import Cartpulgnone from "../../components/Cartpulg/Cartpulgnone/Cartpulgnone";
 import Cartpulglist from "../../components/Cartpulg/Cartpulglist/Cartpulglist";
-import Head from "../../components/common/Head/Head"
 
 class Cart extends Component {
     constructor(props) {
-        super(props);
-        this.state = {
-            flag: ["a"],
-            // cartnumber: 0,
-        }
+        super(props)
+        this.state={
+            cartdata:[],
+        };
+        this.state.cartdata=JSON.parse(localStorage.getItem("cartData"));
     };
     cilckme(){
-        this.child.changeChild();
+        this.child.changeDel();
     };
     onref=(ref)=>{
         this.child=ref;
     };
+    // componentDidMount() {
+    //     this.setState({
+    //         cartdata: JSON.parse(localStorage.getItem("cartData"))
+    //     });
+    // };
+
 
     render() {
         return (
@@ -29,10 +34,9 @@ class Cart extends Component {
                     <span className={"cart-top-c"}>购物车</span>
                     <span className={"cart-top-r"} onClick={this.cilckme.bind(this)}>删除</span>
                 </div>
-                {this.state.flag.length === 0 ? <Cartpulgnone/> : <Cartpulglist onRef={this.onref}/>}
-                {/*{this.state.cartnumber > 0 ? <Cartpulglist/>} : <Cartpulgnone/>*/}
+                {console.log(this.state.cartdata.length)}
+                {this.state.cartdata.length > 0 ? <Cartpulglist onRef={this.onref} /> : <Cartpulgnone/>}
             </div>
-
         )
     }
 }
