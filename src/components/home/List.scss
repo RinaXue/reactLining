@@ -26,11 +26,14 @@
       justify-content: space-around;
       a {
         img {
-          @include rect(1.87rem, 1.87rem);
+          @include rect(1.868rem, 1.87rem);
         }
       }
       .tb_spe {
         margin-bottom: .01rem;
+      }
+      .interval {
+        margin-right: .013rem
       }
     }
   }
