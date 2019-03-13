@@ -9,7 +9,7 @@ class Cart extends Component {
         this.state={
             cartdata:[],
         };
-        this.state.cartdata=JSON.parse(localStorage.getItem("cartData"));
+        this.setState.cartdata=JSON.parse(localStorage.getItem("cartData"))||[];
     };
     cilckme(){
         this.child.changeDel();
@@ -17,6 +17,12 @@ class Cart extends Component {
     onref=(ref)=>{
         this.child=ref;
     };
+    componentWillMount(){
+      let isLogin = localStorage.getItem('isLogin')
+      if(isLogin != 'ok'){
+        this.props.history.push('/userapp/login')
+      }
+    }
     // componentDidMount() {
     //     this.setState({
     //         cartdata: JSON.parse(localStorage.getItem("cartData"))
@@ -34,7 +40,7 @@ class Cart extends Component {
                     <span className={"cart-top-c"}>购物车</span>
                     <span className={"cart-top-r"} onClick={this.cilckme.bind(this)}>删除</span>
                 </div>
-                {console.log(this.state.cartdata.length)}
+                {/* {console.log(this.state.cartdata.length)} */}
                 {this.state.cartdata.length > 0 ? <Cartpulglist onRef={this.onref} /> : <Cartpulgnone/>}
             </div>
         )
