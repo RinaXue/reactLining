@@ -11,7 +11,7 @@ class Detail extends Component {
         number: 1,          //商品数量  
         cartnumber: 0,      //购物车数量
         detailinfo: {},     //请求的数据
-        currentIndex: 0     //
+        currentIndex: 0
     }
   }
 
@@ -35,7 +35,7 @@ class Detail extends Component {
           detailinfo: data.data[0]
         })
       })
-      //再次进入页面判断是否收藏
+      // 再次进入页面判断是否收藏
       let loveArr = JSON.parse(localStorage.getItem('loveData'))
       if(!loveArr) {
         return
@@ -82,33 +82,58 @@ class Detail extends Component {
     page[e.target.index].style.display = 'block'
   }
   loveGoods (e) {
-    if (e.target.style.color === 'red') {
-      e.target.style.color = 'gray'
-      let arr = JSON.parse(localStorage.getItem('loveData'))
-      arr.map((item, index) => {
-        if (item.postID === this.state.detailinfo.postID) {
-          arr.splice(index, 1)
+    // if (e.target.style.color === 'red') {
+    //   e.target.style.color = 'gray'
+    //   let arr = JSON.parse(localStorage.getItem('loveData'))
+    //   arr.map((item, index) => {
+    //     if (item.postID === this.state.detailinfo.postID) {
+    //       arr.splice(index, 1)
+    //     }
+    //   })
+    //   if (arr.length === 0) {
+    //     console.log('ok')
+    //     localStorage.removeItem('loveData')
+    //   } else {
+    //     arr = JSON.stringify(arr)
+    //     localStorage.setItem('loveData', arr)
+    //   }
+    //   arr = JSON.stringify(arr)
+    // } else {
+    //   e.target.style.color = 'red'
+    //   let data= []
+    //   let arr = JSON.parse(localStorage.getItem('loveData'))
+    //   if (arr===null) {
+    //     data = [this.state.detailinfo]
+    //   } else {
+    //     data.push(this.state.detailinfo)
+    //   }
+    //   data = JSON.stringify(data)
+    //   localStorage.setItem('loveData', data)
+    // }
+    let loveArr = JSON.parse(localStorage.getItem('loveData'))
+    console.log(loveArr)
+    if (loveArr===null) {
+      console.log()
+      loveArr = [this.state.detailinfo]
+      e.target.style.color = 'red'
+    } else {
+      loveArr.map((item, index) => {
+        console.log(item.postID, this.state.detailinfo.postID)
+        if(item.postID===this.state.detailinfo.postID) {
+          loveArr.splice(index, 1)
+          e.target.style.color = 'gray'
+        }
+        else {
+          loveArr.push(this.state.detailinfo)
+          e.target.style.color = 'red'
         }
       })
-      if (arr.length === 0) {
-        console.log('ok')
-        localStorage.removeItem('loveData')
-      } else {
-        arr = JSON.stringify(arr)
-        localStorage.setItem('loveData', arr)
-      }
-      arr = JSON.stringify(arr)
+    }
+    if(loveArr.length!==0) {
+      loveArr = JSON.stringify(loveArr)
+      localStorage.setItem('loveData', loveArr)
     } else {
-      e.target.style.color = 'red'
-      let data= []
-      let arr = JSON.parse(localStorage.getItem('loveData'))
-      if (arr===null) {
-        data = [this.state.detailinfo]
-      } else {
-        data.push(this.state.detailinfo)
-      }
-      data = JSON.stringify(data)
-      localStorage.setItem('loveData', data)
+      localStorage.removeItem('loveData')
     }
   }
   addCart () {
