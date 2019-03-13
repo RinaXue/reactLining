@@ -5,10 +5,11 @@ import Cartpulglist from "../../components/Cartpulg/Cartpulglist/Cartpulglist";
 
 class Cart extends Component {
     constructor(props) {
-        super(props);
-        this.state = {
-            cartdata: [],
-        }
+        super(props)
+        this.state={
+            cartdata:[],
+        };
+        this.state.cartdata=JSON.parse(localStorage.getItem("cartData"));
     };
     cilckme(){
         this.child.changeDel();
@@ -16,11 +17,11 @@ class Cart extends Component {
     onref=(ref)=>{
         this.child=ref;
     };
-    componentDidMount() {
-        this.setState({
-            cartdata: JSON.parse(localStorage.getItem("cartData"))
-        });
-    };
+    // componentDidMount() {
+    //     this.setState({
+    //         cartdata: JSON.parse(localStorage.getItem("cartData"))
+    //     });
+    // };
 
 
     render() {
