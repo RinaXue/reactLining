@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavBar, Icon } from 'antd-mobile';
 import { Link } from 'react-router-dom';
-import api from '@/api/kind/index.js';
+// import api from '@/api/kind/index.js';
 import '../components/kind/kind.scss';
 
 class Com extends Component {
