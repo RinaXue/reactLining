@@ -24,56 +24,56 @@ class Com extends Component {
                             <li className="te te2">
                                 <Link to = { './KindList/' }>
                                     <img src=" http://cdn.lining.com/postsystem/docroot/images/goods/201901/447459/display_447459_1.jpg" alt=""/>
-                                    <div>运动城app</div>
+                                    <div>了解更多 >></div>
                                 </Link>
                             </li >
                             <li className="te te2">
                                 <Link to = { '/kindlist/' }>
                                     <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201901/443191/display_443191_1.jpg" alt=""/>
-                                    <div>运动城app</div>
+                                    <div>了解更多 >></div>
                                 </Link>
                             </li>
                             <li className="te2">
                                 <Link to = { '/kindlist/' }>
                                     <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201901/446072/display_446072_1.jpg" alt=""/>
-                                    <div>运动城app</div>
+                                    <div>了解更多 >></div>
                                 </Link>
                             </li>
                             <li className="te te2">
                                 <Link to = { '/kindlist/' }>
                                     <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201901/444617/display_444617_1.jpg" alt=""/>
-                                    <div>运动城app</div>
+                                    <div>了解更多 >></div>
                                 </Link>
                             </li>
                             <li className="te te2">
                                 <Link to = { '/kindlist/' }>
                                     <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201901/443119/display_443119_1.jpg" alt=""/>
-                                    <div>运动城app</div>
+                                    <div>了解更多 >></div>
                                 </Link>
                             </li>
                             <li className="te2">
                                 <Link to = { '/kindlist/' }>
                                     <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201901/444617/display_444617_1.jpg" alt=""/>
-                                    <div>运动城app</div>
+                                    <div>了解更多 >></div>
                                 </Link>
                                 
                             </li>
                             <li className="te">
                                 <Link to = { '/kindlist/' }>
                                     <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201901/448039/display_448039_1.jpg" alt=""/>
-                                    <div>运动城app</div>
+                                    <div>了解更多 >></div>
                                 </Link>
                             </li>
                             <li className="te">
                                 <Link to = { '/kindlist/' }>
                                     <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201901/445246/display_445246_1.jpg" alt=""/>
-                                    <div>运动城app</div>
+                                    <div>了解更多 >></div>
                                 </Link>
                             </li>
                             <li>
                                 <Link to = { '/kindlist/' }>
                                     <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201901/445529/display_445529_1.jpg" alt=""/>
-                                    <div>运动城app</div>
+                                    <div>了解更多 >></div>
                                 </Link>    
                             </li>
 
