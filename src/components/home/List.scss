@@ -23,16 +23,14 @@
       border-top: .01rem solid #e5e5e5;
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-around;
       a {
         img {
-          @include rect(1.86rem, 1.87rem);
+          @include rect(1.87rem, 1.87rem);
         }
       }
       .tb_spe {
         margin-bottom: .01rem;
-      }
-      .tb-interval {
-        border-right: .012rem solid #e5e5e5;
       }
     }
   }

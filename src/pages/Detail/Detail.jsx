@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import api from '@/api/detail/index'
-import { Toast } from 'antd-mobile';
 import './Detail.scss'
 
 class Detail extends Component {
   constructor (props) {
     super(props);
     this.state = {
+        data: ['1', '2'],  //轮播图自带数据
+        imgHeight: 300,     //轮播图高度
         number: 1,          //商品数量  
         cartnumber: 0,      //购物车数量
         detailinfo: {},     //请求的数据
@@ -154,7 +155,6 @@ class Detail extends Component {
     })
     cartArr = JSON.stringify(cartArr)
     localStorage.setItem('cartData', cartArr)
-    Toast.info('添加成功，在购物车等亲', 1);
   }
   goCart () {
     this.props.history.push('/cart')
