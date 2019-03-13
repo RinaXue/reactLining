@@ -16,15 +16,18 @@ class Detail extends Component {
 
   componentDidMount() {
       //购物车数量
-      let cartArr = localStorage.getItem('cartData')
-      cartArr = JSON.parse(cartArr)
+      let cartArr = JSON.parse(localStorage.getItem('cartData')) || []
+      let sum = 0
+      cartArr.forEach(item => {
+        sum += item.number
+      })
       if(cartArr===null) {
         this.setState({
           cartnumber: 0
         })
       } else {
         this.setState({
-          cartnumber: cartArr.length
+          cartnumber: sum
         })
       }
       //请求物品详情
@@ -109,19 +112,28 @@ class Detail extends Component {
     //   data = JSON.stringify(data)
     //   localStorage.setItem('loveData', data)
     // }
-    let loveArr = JSON.parse(localStorage.getItem('loveData'))
+    let loveArr = JSON.parse(localStorage.getItem('loveData')) || []
     console.log(loveArr)
-    if (loveArr===null) {
+    if (loveArr===0) {
       loveArr = [this.state.detailinfo]
       e.target.style.color = 'red'
-    } else {
-      loveArr.some()
-    }
-    if(loveArr.length!==0) {
-      loveArr = JSON.stringify(loveArr)
       localStorage.setItem('loveData', loveArr)
     } else {
-      localStorage.removeItem('loveData')
+      let flag = loveArr.some(item => {
+        return item.postID === this.state.detailinfo.postID
+      })
+      if(flag) {
+        loveArr.forEach((item, index) => {
+          if(item.postID === this.state.detailinfo.postID) {
+            loveArr.splice(index, 1)
+            e.target.style.color = 'gray'
+          }
+        })
+      } else {
+        loveArr.push(this.state.detailinfo)
+        e.target.style.color = 'red'
+      }
+      localStorage.setItem('loveData', JSON.stringify(loveArr))
     }
   }
   // addCart () {
@@ -156,7 +168,7 @@ class Detail extends Component {
     let cartData = JSON.parse(localStorage.getItem('cartData')) || []
     if (cartData.length===0) {
       cartData = [params]
-      localStorage.setItem('cartData', JSON.stringify(cartData))
+      // localStorage.setItem('cartData', JSON.stringify(cartData))
     } else {
       let flag = cartData.some(item => {
         return item.id === this.state.detailinfo.postID
@@ -171,8 +183,16 @@ class Detail extends Component {
       } else {
         cartData.push(params)
       }
-      localStorage.setItem('cartData', JSON.stringify(cartData))
+      // localStorage.setItem('cartData', JSON.stringify(cartData))
     }
+    let sum = 0
+    cartData.forEach(item => {
+      sum += item.number
+    })
+    this.setState({
+      cartnumber: sum
+    })
+    localStorage.setItem('cartData', JSON.stringify(cartData))
   }
   goCart () {
     this.props.history.push('/cart')
