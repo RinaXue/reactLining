@@ -8,8 +8,7 @@ class Com extends Component{
     constructor (props) {
         super(props);
         this.state = {
-            data: [],
-            imgHeight: 200,
+            data: []
         }
     }
 
@@ -46,7 +45,7 @@ class Com extends Component{
                             <a
                             key={val.id}
                             href="http://www.alipay.com"
-                            style={{ display: 'inline-block', width: '100%', height: this.state.imgHeight }}
+                            style={{ display: 'inline-block', width: '100%' }}
                             >
                             <img
                                 src={ val.imgUrl }
