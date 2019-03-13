@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import './Userhead.scss'
 import { ActionSheet, Button } from 'antd-mobile';
+import {Link} from 'react-router-dom'
 
 const isIPhone = new RegExp('\\biPhone\\b|\\biPod\\b', 'i').test(window.navigator.userAgent);
 let wrapProps;
@@ -44,7 +45,7 @@ class Userhead extends Component{
           <div className="mz">{this.props.userid}</div>
         </div>
         <div className="xingxi">
-          <a href="#">账户管理、收货地址></a>
+          <Link to='/userapp/address'>账户管理、收货地址></Link>
         </div>
         <div className="mingpian">
           <img src="/images/member_mp_img.png" alt=""/>
