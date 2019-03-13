@@ -3,6 +3,7 @@ import {Switch, Route} from 'react-router-dom'
 import Res from '@/pages/Res'
 import Login from '@/pages/Login'
 import Favorites from '@/pages/Favorites'
+import Address from '@/pages/Address'
 
 class UserApp extends Component {
   render() {
@@ -12,6 +13,7 @@ class UserApp extends Component {
           <Route path='/userapp/login' component={Login}/>
           <Route path='/userapp/res' component={Res}/>
           <Route path='/userapp/favorites' component={Favorites}/>
+          <Route path='/userapp/address' component={Address}/>
         </Switch>
       </div>
     )
