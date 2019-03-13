@@ -112,21 +112,10 @@ class Detail extends Component {
     let loveArr = JSON.parse(localStorage.getItem('loveData'))
     console.log(loveArr)
     if (loveArr===null) {
-      console.log()
       loveArr = [this.state.detailinfo]
       e.target.style.color = 'red'
     } else {
-      loveArr.map((item, index) => {
-        console.log(item.postID, this.state.detailinfo.postID)
-        if(item.postID===this.state.detailinfo.postID) {
-          loveArr.splice(index, 1)
-          e.target.style.color = 'gray'
-        }
-        else {
-          loveArr.push(this.state.detailinfo)
-          e.target.style.color = 'red'
-        }
-      })
+      loveArr.some()
     }
     if(loveArr.length!==0) {
       loveArr = JSON.stringify(loveArr)
@@ -135,6 +124,27 @@ class Detail extends Component {
       localStorage.removeItem('loveData')
     }
   }
+  // addCart () {
+  //   let params = {
+  //     id: this.state.detailinfo.postID,
+  //     name: this.state.detailinfo.goodsName,
+  //     pictrue: this.state.detailinfo.mainPic,
+  //     price: this.state.detailinfo.marketPrice,
+  //     number: this.state.number
+  //   };
+  //   let cartArr = JSON.parse(localStorage.getItem('cartData'))
+  //   if (cartArr===null) {
+  //     cartArr = [params]
+  //   } else {
+  //     for (cartArr.)
+  //   }
+  //   this.setState({
+  //     cartnumber: cartArr.length
+  //   })
+  //   cartArr = JSON.stringify(cartArr)
+  //   localStorage.setItem('cartData', cartArr)
+  //   Toast.info('添加成功，在购物车等亲', 1);
+  // }
   addCart () {
     let params = {
       id: this.state.detailinfo.postID,
@@ -143,18 +153,26 @@ class Detail extends Component {
       price: this.state.detailinfo.marketPrice,
       number: this.state.number
     };
-    let cartArr = JSON.parse(localStorage.getItem('cartData'))
-    if (cartArr===null) {
-      cartArr = [params]
+    let cartData = JSON.parse(localStorage.getItem('cartData')) || []
+    if (cartData.length===0) {
+      cartData = [params]
+      localStorage.setItem('cartData', JSON.stringify(cartData))
     } else {
-      cartArr.push(params)
+      let flag = cartData.some(item => {
+        return item.id === this.state.detailinfo.postID
+      })
+      console.log(flag)
+      if (flag) {
+        cartData.forEach((item, index) => {
+          if (item.id === this.state.detailinfo.postID) {
+            cartData[index].number += 1
+          }
+        })
+      } else {
+        cartData.push(params)
+      }
+      localStorage.setItem('cartData', JSON.stringify(cartData))
     }
-    this.setState({
-      cartnumber: cartArr.length
-    })
-    cartArr = JSON.stringify(cartArr)
-    localStorage.setItem('cartData', cartArr)
-    Toast.info('添加成功，在购物车等亲', 1);
   }
   goCart () {
     this.props.history.push('/cart')
