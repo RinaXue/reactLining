@@ -121,6 +121,8 @@ html {
     }
   }
   .header {
+    position: fixed;
+    top: 0;
     @include rect(100%, .44rem);
     background-color: #000;
     text-align: center;
@@ -137,6 +139,7 @@ html {
   }
   .bannerone {
     @include rect(100%, 3rem);
+    margin-top: .44rem;
       img {
         @include rect(100%, 100%);
       } 

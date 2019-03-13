@@ -193,6 +193,7 @@ class Detail extends Component {
       cartnumber: sum
     })
     localStorage.setItem('cartData', JSON.stringify(cartData))
+    Toast.info('添加成功，在购物车等亲哟', 1);
   }
   goCart () {
     this.props.history.push('/cart')
