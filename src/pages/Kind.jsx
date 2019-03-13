@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import { NavBar, Icon } from 'antd-mobile';
 import { Link } from 'react-router-dom';
+import api from '@/api/kind/index.js';
 import '../components/kind/kind.scss';
 
 class Com extends Component {
+
+
+
     render() {
         return(
 
@@ -19,56 +23,56 @@ class Com extends Component {
                         <ul className="ul1">
                             <li className="te te2">
                                 <Link to = { './KindList/' }>
-                                    <img src="/images/9cb5861c-5ff8-42b8-8c9b-0f6b4a53cde9.jpg" alt=""/>
+                                    <img src=" http://cdn.lining.com/postsystem/docroot/images/goods/201901/447459/display_447459_1.jpg" alt=""/>
                                     <div>运动城app</div>
                                 </Link>
                             </li >
                             <li className="te te2">
                                 <Link to = { '/kindlist/' }>
-                                    <img src="/images/65bd9fc8-7f5e-4dba-b083-0c05b1bc9b96.jpg" alt=""/>
+                                    <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201901/443191/display_443191_1.jpg" alt=""/>
                                     <div>运动城app</div>
                                 </Link>
                             </li>
                             <li className="te2">
                                 <Link to = { '/kindlist/' }>
-                                    <img src="/images/2e7b0a93-2da2-437e-adde-ffba0cfbe218.jpg" alt=""/>
+                                    <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201901/446072/display_446072_1.jpg" alt=""/>
                                     <div>运动城app</div>
                                 </Link>
                             </li>
                             <li className="te te2">
                                 <Link to = { '/kindlist/' }>
-                                    <img src="/images/f91ac28f-b66c-45e0-9752-41bcfa0302c7.jpg" alt=""/>
+                                    <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201901/444617/display_444617_1.jpg" alt=""/>
                                     <div>运动城app</div>
                                 </Link>
                             </li>
                             <li className="te te2">
                                 <Link to = { '/kindlist/' }>
-                                    <img src="/images/ce94d818-bc17-4028-9c5f-cd22e6661d83.jpg" alt=""/>
+                                    <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201901/443119/display_443119_1.jpg" alt=""/>
                                     <div>运动城app</div>
                                 </Link>
                             </li>
                             <li className="te2">
                                 <Link to = { '/kindlist/' }>
-                                    <img src="/images/977a1fc2-0ee7-4f73-a7f6-eea5b73f642b.jpg" alt=""/>
+                                    <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201901/444617/display_444617_1.jpg" alt=""/>
                                     <div>运动城app</div>
                                 </Link>
                                 
                             </li>
                             <li className="te">
                                 <Link to = { '/kindlist/' }>
-                                    <img src="/images/8d502712-32ed-4301-a4e7-45b1ea4aaa77.jpg" alt=""/>
+                                    <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201901/448039/display_448039_1.jpg" alt=""/>
                                     <div>运动城app</div>
                                 </Link>
                             </li>
                             <li className="te">
                                 <Link to = { '/kindlist/' }>
-                                    <img src="/images/2cf2f1f9-df47-47bc-be52-c5d70af53778.jpg" alt=""/>
+                                    <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201901/445246/display_445246_1.jpg" alt=""/>
                                     <div>运动城app</div>
                                 </Link>
                             </li>
                             <li>
                                 <Link to = { '/kindlist/' }>
-                                    <img src="/images/1613e012-64fa-444a-b4de-83ebd804b0d6.jpg" alt=""/>
+                                    <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201901/445529/display_445529_1.jpg" alt=""/>
                                     <div>运动城app</div>
                                 </Link>    
                             </li>
@@ -80,62 +84,62 @@ class Com extends Component {
                         <ul className="ul2">
                             <li>
                                 <Link to={ '/kindlist/' }>
-                                    <img src="/images/886a68b6-f0aa-41cd-ad89-757c427a33c9.jpg" alt=""/>
+                                    <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201901/454341/display_454341_1.jpg" alt=""/>
                                 </Link>
                             </li>
                             <li>
                                 <Link to={ '/kindlist/' }>
-                                    <img src="/images/899329e3-9ec3-466b-856f-15f2a91b72a4.jpg" alt=""/>
+                                    <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201804/386551/display_386551_1.jpg" alt=""/>
                                 </Link>
                             </li>
                             <li>
                                 <Link to={ '/kindlist/' }>
-                                    <img src="/images/276aed28-5c4c-4ded-9070-59719e583ee5.jpg" alt=""/>
+                                    <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201901/447320/display_447320_1.jpg" alt=""/>
                                 </Link>
                             </li>
                             <li>
                                 <Link to={ '/kindlist/' }>
-                                    <img src="/images/01d5dc75-9e5d-405f-bf93-5793fec72e24.jpg" alt=""/>
+                                    <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201901/454325/display_454325_1.jpg" alt=""/>
                                 </Link>
                             </li>
                             <li>
                                 <Link to={ '/kindlist/' }>
-                                    <img src="/images/a5b3890a-7d78-4bac-be54-45febc984835.jpg" alt=""/>
+                                    <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201901/448341/display_448341_1.jpg" alt=""/>
                                 </Link>
                             </li>
                             <li>
                                 <Link to={ '/kindlist/' }>
-                                    <img src="/images/e6657ca7-c4c5-43fc-9bd6-29999102fc61.jpg" alt=""/>
+                                    <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201901/452837/display_452837_1.jpg" alt=""/>
                                 </Link>
                             </li>
                             <li>
                                 <Link to={ '/kindlist/' }>
-                                    <img src="/images/7865e470-0296-4f6b-98aa-30ab9824358d.jpg" alt=""/>
+                                    <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201901/445278/display_445278_1.jpg" alt=""/>
                                 </Link>
                             </li>
                             <li>
                                 <Link to={ '/kindlist/' }>
-                                    <img src="/images/b5804b78-d14c-4e34-bd39-244183f92997.jpg" alt=""/>
+                                    <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201806/402961/display_402961_1.jpg" alt=""/>
                                 </Link>
                             </li>
                             <li>
                                 <Link to={ '/kindlist/' }>
-                                    <img src="/images/7865e470-0296-4f6b-98aa-30ab9824358d.jpg" alt=""/>
+                                    <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201806/405015/display_405015_1.jpg" alt=""/>
                                 </Link>
                             </li>
                             <li>
                                 <Link to={ '/kindlist/' }>
-                                    <img src="/images/e6657ca7-c4c5-43fc-9bd6-29999102fc61.jpg" alt=""/>
+                                    <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201806/405015/display_405015_1.jpg" alt=""/>
                                 </Link>
                             </li>
                             <li>
                                 <Link to={ '/kindlist/' }>
-                                    <img src="/images/e6657ca7-c4c5-43fc-9bd6-29999102fc61.jpg" alt=""/>
+                                    <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201809/429875/display_429875_1.jpg" alt=""/>
                                 </Link>
                             </li>
                             <li>
                                 <Link to={ '/kindlist/' }>
-                                    <img src="/images/7865e470-0296-4f6b-98aa-30ab9824358d.jpg" alt=""/>
+                                    <img src="http://cdn.lining.com/postsystem/docroot/images/goods/201901/449707/display_449707_1.jpg" alt=""/>
                                 </Link>
                             </li>
                        </ul>
