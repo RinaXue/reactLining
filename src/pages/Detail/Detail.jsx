@@ -134,6 +134,7 @@ class Detail extends Component {
         e.target.style.color = 'red'
       }
       localStorage.setItem('loveData', JSON.stringify(loveArr))
+      Toast.info('收藏成功', 1)
     }
   }
   // addCart () {
@@ -193,7 +194,7 @@ class Detail extends Component {
       cartnumber: sum
     })
     localStorage.setItem('cartData', JSON.stringify(cartData))
-    Toast.info('添加成功，在购物车等亲', 1);
+    Toast.info('添加成功，在购物车等亲', 1)
   }
   goCart () {
     this.props.history.push('/cart')
