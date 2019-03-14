@@ -128,8 +128,8 @@
         float: right;
         @include rect(70%, 0.5rem);
         h5{
-          float: right;
-          padding-right: 0.1rem;
+          float: left;
+          padding-left: 15%;
           line-height: 0.5rem;
           font-size: 0.18rem;
           span{

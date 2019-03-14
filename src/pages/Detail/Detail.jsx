@@ -164,7 +164,8 @@ class Detail extends Component {
       name: this.state.detailinfo.goodsName,
       pictrue: this.state.detailinfo.mainPic,
       price: this.state.detailinfo.marketPrice,
-      number: this.state.number
+      number: this.state.number,
+      hasChecked:false
     };
     let cartData = JSON.parse(localStorage.getItem('cartData')) || []
     if (cartData.length===0) {

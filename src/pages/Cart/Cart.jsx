@@ -6,9 +6,9 @@ import Cartpulglist from "../../components/Cartpulg/Cartpulglist/Cartpulglist";
 class Cart extends Component {
     constructor(props) {
         super(props)
-        this.state = {
-            cartdata:[]
-        }
+        this.state={
+            cartdata:[],
+        };
     };
     cilckme(){
         this.child.changeDel();
@@ -16,25 +16,17 @@ class Cart extends Component {
     onref=(ref)=>{
         this.child=ref;
     };
-    componentDidMount () {
+    onchoose=(choose)=>{
+        this.leng= choose;
+    };
+    componentDidMount() {
         this.setState({
-            cartdata: JSON.parse(localStorage.getItem("cartData"))||[]
-        })
-    }
-    componentWillMount(){
-      let isLogin = localStorage.getItem('isLogin')
-      if(isLogin != 'ok'){
-        this.props.history.push('/userapp/login')
-      }
-    }
-    // componentDidMount() {
-    //     this.setState({
-    //         cartdata: JSON.parse(localStorage.getItem("cartData"))
-    //     });
-    // };
-
+            cartdata: JSON.parse(localStorage.getItem("cartData"))
+        });
+    };
 
     render() {
+        let str = this.state.cartdata.length > 0 ? <Cartpulglist onRef={this.onref} onChoose={this.onchoose}/> : <Cartpulgnone/>;
         return (
             <div className={"content"}>
                 <div className={"cart-top"}>
@@ -44,8 +36,8 @@ class Cart extends Component {
                     <span className={"cart-top-c"}>购物车</span>
                     <span className={"cart-top-r"} onClick={this.cilckme.bind(this)}>删除</span>
                 </div>
-                {/* {console.log(this.state.cartdata.length)} */}
-                {this.state.cartdata.length > 0 ? <Cartpulglist onRef={this.onref} /> : <Cartpulgnone/>}
+                {console.log(this.leng)}
+                { str }
             </div>
         )
     }
