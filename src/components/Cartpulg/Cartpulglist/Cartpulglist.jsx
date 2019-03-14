@@ -35,7 +35,7 @@ class Cartpulglist extends Component {
                 arr: newarr
             })
         }
-        console.log(this.state.cartdata[index].hasChecked);
+        // console.log(this.state.cartdata[index].hasChecked);
         this.state.cartdata[index].hasChecked = ! this.state.cartdata[index].hasChecked;
         localStorage.setItem('cartData', JSON.stringify(this.state.cartdata));
         // console.log(this.state.cartdata[index].hasChecked);
@@ -58,7 +58,7 @@ class Cartpulglist extends Component {
         console.log(this.state.cartdata);
         this.props.onRef(this);
         this.props.onChoose(this.state.cartdata.length);
-        console.log(this.state.cartdata.length);
+
     };
 
     changeDel() {
@@ -74,6 +74,7 @@ class Cartpulglist extends Component {
             cartdata: JSON.parse(localStorage.getItem("cartData"))
         });
         this.totalPrice();
+        this.props.onChoose(this.state.cartdata.length);
     };
 
     totalPrice () {
