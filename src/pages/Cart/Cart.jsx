@@ -5,36 +5,36 @@ import Cartpulglist from "../../components/Cartpulg/Cartpulglist/Cartpulglist";
 
 class Cart extends Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
-            cartdata:[]
-        }
+            cartdata: [],
+            leng: ''
+        };
     };
-    cilckme(){
+
+    cilckme() {
         this.child.changeDel();
     };
-    onref=(ref)=>{
-        this.child=ref;
-    };
-    componentDidMount () {
-        this.setState({
-            cartdata: JSON.parse(localStorage.getItem("cartData"))||[]
-        })
-    }
-    componentWillMount(){
-      let isLogin = localStorage.getItem('isLogin')
-      if(isLogin != 'ok'){
-        this.props.history.push('/userapp/login')
-      }
-    }
-    // componentDidMount() {
-    //     this.setState({
-    //         cartdata: JSON.parse(localStorage.getItem("cartData"))
-    //     });
-    // };
 
+    onref = (ref) => {
+        this.child = ref;
+    };
+    onchoose = (choose) => {
+        this.setState({
+            leng: choose
+        })
+
+    };
+
+    componentDidMount() {
+        this.setState({
+            cartdata: JSON.parse(localStorage.getItem("cartData")),
+            leng: JSON.parse(localStorage.getItem("cartData")).length
+        });
+    };
 
     render() {
+        let str = this.state.leng!==0 ? <Cartpulglist onRef={this.onref} onChoose={this.onchoose}/> : <Cartpulgnone/>;
         return (
             <div className={"content"}>
                 <div className={"cart-top"}>
@@ -44,8 +44,8 @@ class Cart extends Component {
                     <span className={"cart-top-c"}>购物车</span>
                     <span className={"cart-top-r"} onClick={this.cilckme.bind(this)}>删除</span>
                 </div>
-                {/* {console.log(this.state.cartdata.length)} */}
-                {this.state.cartdata.length > 0 ? <Cartpulglist onRef={this.onref} /> : <Cartpulgnone/>}
+                {/*{console.log("长度", this.state.leng)}*/}
+                {str}
             </div>
         )
     }

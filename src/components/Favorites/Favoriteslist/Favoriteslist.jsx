@@ -9,9 +9,18 @@ class Com extends Component{
       arr:[]
     }
   }
+  // shanchu(index){
+  //   let arr=JSON.parse(localStorage.getItem('loveData'))||[]
+  //   arr=arr.splice(index,1)
+    
+  //   this.setState({
+  //     arr:arr
+  //   })
+  //   localStorage.setItem("loveData",JSON.stringify(arr))
+  // }
   componentDidMount(){
     this.setState({
-      arr:JSON.parse(localStorage.getItem('loveData'))
+      arr:JSON.parse(localStorage.getItem('loveData'))||[]
     })
   }
   render(){
