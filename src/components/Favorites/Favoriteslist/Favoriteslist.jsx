@@ -41,7 +41,7 @@ class Com extends Component{
             {/* <Card.Body>
               <div>This is content of `Card`</div>
             </Card.Body> */}
-            <Card.Footer content={item.marketPrice} extra={<a onClick={this.shanchu.bind(this,index)}>删除</a>} />
+            <Card.Footer content={item.marketPrice} extra={<a>删除</a>} />
           </Card>
         </div>
         )
