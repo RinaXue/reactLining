@@ -44,7 +44,8 @@ html {
     z-index: 1;
     .icon2fanhui {
       float: left;
-      font: .2rem/.44rem "";
+      font-size: .2rem;
+      line-height: .44rem;
       margin-left: .15rem;
       color: #fff;
     }
@@ -73,7 +74,8 @@ html {
       color: #ccc;
       border-radius: .05rem;
       text-align: center;
-      font: .12rem/.34rem "";
+      font-size: .12rem;
+      line-height: .34rem;
       margin: .05rem .05rem 0 0;
     }
   }

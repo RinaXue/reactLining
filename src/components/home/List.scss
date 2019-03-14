@@ -11,10 +11,12 @@
     .tb_tit {
       @include rect(100%, .42rem);
       text-indent: .1rem;
-      font: .2rem/.42rem "";
+      font-size: .2rem;
+      line-height: .42rem;
       .more {
         float: right;
-        font: .14rem/.42rem "";
+        font-size: .14rem;
+        line-height: .42rem;
         margin-right: .13rem;
       }
     }

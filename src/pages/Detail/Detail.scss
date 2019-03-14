@@ -131,7 +131,8 @@ html {
     }
     .icon2fanhui {
       float: left;
-      font: .2rem/.44rem "";
+      font-size: .2rem;
+      line-height: .44rem;
       margin-left: .15rem;
     }
   }
@@ -148,23 +149,27 @@ html {
       padding: .1rem 0 0 .1rem;
       width: 3.55rem;
       color: #333;
-      font: .14rem/.2rem "";
+      font-size: .14rem;
+      line-height: .2rem;
     }
     .goodsprice {
       span {
         color: #999;
-        font: .13rem/.49rem "";
+        font-size: .13rem;
+        line-height: .49rem;
         margin: 0 .06rem 0 .16rem;
       }
       i {
         color: #ce0000;
-        font: .17rem/.49rem "";
+        font-size: .17rem;
+        line-height: .49rem;
       }
     }
     .goodscolor {
       span {
         color: #999;
-        font: .13rem/.42rem "";
+        font-size: .13rem;
+        line-height: .42rem;
         margin-left: .16rem;
       }
       b {
@@ -172,7 +177,9 @@ html {
         @include rect(.45rem, .25rem);
         border: .02rem solid #aaa;
         margin-left: .14rem;
-        font: 100 .12rem/.25rem "";
+        font-weight: 100;
+        font-size: .12rem;
+        line-height: .25rem;
         color: #000;
         text-align: center;
       }
@@ -183,7 +190,8 @@ html {
     .goodsnumber {
       span {
         color: #999;
-        font: .13rem/.66rem "";
+        font-size: .13rem;
+        line-height: .66rem;
         margin: 0 .13rem 0 .16rem;
       }
       b {
